@@ -9,7 +9,7 @@ flickr = FlickrAPI(FLICKR_PUBLIC, FLICKR_SECRET, format = 'parsed-json')
 
 tag = raw_input("Please enter the tag : ")
 number = raw_input("Number of photos to download : ")
-response = flickr.photos.search(tags = tag, per_page = number * 4, extras='url_o', privacy_filter = 1)
+response = flickr.photos.search(tags = tag, per_page = number * 4, extras='url_o', privacy_filter = 1, sort = 'interestingness-desc')
 photos = response['photos']
 l = photos['photo']
 ids_list = []
