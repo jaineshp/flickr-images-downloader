@@ -20,8 +20,6 @@ done = 0
 
 op_file = open('data', 'w')
 
-print ids_list
-
 for id in ids_list:
 	if done == number:
 		break
